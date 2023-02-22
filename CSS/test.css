@@ -1,0 +1,52 @@
+body {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+p{
+    font-size: 10px;
+}
+[id=container] {
+    width: 50vw;
+    background: white;
+    color: #000;
+    margin: 20px auto;
+    overflow: auto;
+    padding: 2.6rem;
+    border: 2px solid #B2967D;
+}
+
+header {
+    text-align: center;
+    border-bottom: #E7D8C9 dashed 1px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header p {
+    padding: 0;
+    margin-top: 5px;
+    color: #000;
+}
+
+input[type="submit"] {
+    background: #B2967D;
+    border: 0;
+    color: #fff;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+[id=results] {
+    margin-top: 1rem;
+}
+
+[id=results] h3 {
+    background: #EEE4E1;
+    padding: 10px;
+    margin: 10px 0;
+    color: #000;
+}

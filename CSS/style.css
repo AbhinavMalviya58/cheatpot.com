@@ -1,0 +1,821 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+        position: fixed;
+        /* position: relative; */
+        /* display: block; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+}
+header.shadow{
+    background: whitesmoke;
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 100%);
+    transition: 0.4s;
+}
+header.shadow .logo{
+    color: black;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* .top{
+    width: 100%;
+} */
+.text-box{
+    width: 100%;
+    min-height: 150px;
+    background-image: url(/photos/187161.jpg);
+    display: grid;
+    justify-content: center;
+    min-height: 20vh;
+    background-size: contain;
+    background-position: center;
+}
+.text-box h1{
+    color: wheat;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+nav {
+    display: flex;
+    padding: 2%, 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+}
+@media screen and (max-width: 900px){
+    nav img {
+        width: 70px;
+    }
+}
+
+.nev-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nev-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nev-links ul li a {
+    color: rgb(255, 187, 0);
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nev-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nev-links ul li:hover::after {
+    width: 100%;
+}
+
+/* --------------------- search box --------------------------- */
+
+.search {
+    font-size: 0; 
+    width: 240px;
+    height: 30px;
+    display: flex;
+}
+
+input {
+    padding: 0px;
+    font-size: 18px;
+    height: 100%;
+    background: rgb(215, 209, 209);
+    border: none;
+}
+
+.searchText {
+    text-indent: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid searchBorder-color;
+    border-right: none;
+    width: 200px;
+    height: 100%;
+}
+
+.searchButton {
+    color: rgb(59, 165, 222);
+    background-color: searchButton-color;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    width: searchButton-width;
+}
+
+/* Tags */
+
+.post-filter {
+    min-width: 150px;
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    column-gap: 1.0rem;
+    margin-top: 1rem !important;
+    overflow-x: scroll;
+    /* overflow-y: scroll; */
+}
+
+.post-box {
+    /* background: rgb(204, 204, 204);
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    padding: 20px;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem; */
+}
+
+.post-filter::-webkit-scrollbar{
+    width: 0;
+}
+
+.post-filter::-webkit-scrollbar{
+    width: 15px;
+    height: 10px;
+    background: #333333;
+}
+.post-filter::-webkit-scrollbar-thumb{
+    height: 15px;
+    background: linear-gradient(45deg,red,#252525,red);
+    cursor: pointer;
+    border-radius: 30%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #fff;
+}
+.tag-scroll {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.fliter-item {
+    /* min-width: 100px; */
+    /* height: 20px; */
+    text-align: center;
+    margin-right: 2px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.active-filter {
+    background: red;
+    color: wheat;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+
+/* ------------------------------- CSE, IT, ECE, ME -------------------------------*/
+.subject {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 0.5rem;
+    
+}
+
+.container {
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* margin: 120px; */
+}
+
+.container .card {
+    position: relative;
+}
+
+.container .card .face {
+    width: 250px;
+    height: 200px;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face1 {
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset 20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+}
+
+.container .card .face.face1 .content {
+    opacity: .2;
+    transform: 0.5s;
+    text-align: center;
+}
+
+.container .card .face.face1 .content i {
+    font-size: 4rem;
+    color: black;
+    display: inline-block;
+}
+.container .card .face.face1 .content img {
+    height: 10vh;
+}
+
+.container .card .face.face1 .content h3 {
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+}
+.container .card .face.face1 .content a {
+    transition: .5s;
+}
+
+.container .card .face.face2 .content p {
+    font-size: 0.9rem;
+    color: black;
+    text-align: center;
+}
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.bookimg{
+    font-size: 4rem;
+}
+
+.bookimg img{
+    height: 10vh;
+}
+/* ------------------------------- Computer Science Engineering  ------------------------------ */
+
+.input-page {
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+}
+
+.add-more-files {
+    width: 29vh;
+    margin: 10px;
+    border-radius: 0.3rem;
+    padding: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to right,
+    #ff7a18,
+    #af002d,
+    #319197 100%,
+    #319197 200%);
+background-position-x: 0%;
+background-size: 200%;
+border: 0;
+border-radius: 8px;
+color: #fff;
+padding: 1rem 1.25rem;
+text-shadow: 0 1px 1px #333;
+transition: all 0.25s;
+}
+.book{
+    /* display: flex;
+    margin: 70px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+    text-transform: uppercase;
+}
+.add-more-files:hover{
+    background-position-x: 100%;
+        transform: scale(1.1);
+}
+.inp-container{
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    
+}
+.inp-container h4{
+    
+    color: rgb(255, 255, 255);
+    
+}
+#upload-file{
+    opacity: 0;
+    display: block;
+    height: 6rem;
+    width: 15%;
+    position: absolute;
+    cursor: pointer;
+}
+.drop{
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: rgb(108,107,175);
+}
+.drop2{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: rgb(108,107,175);
+}
+/* ---------------------------------- Information technology ---------------------------------- */
+
+/* ------------------------- Electronics and Communication Engineering ------------------------ */
+
+/* ---------------------------------- Mechanical Engineering ---------------------------------- */
+
+/* notification */
+
+.notification{
+    height: 100vh;
+}
+
+.notic{
+    background: #00FFCB;
+    width: 1030px;
+    margin: 10% auto;
+    border-radius: 50px;
+}
+@media screen and (max-width: 900px) {
+    .notic{
+        background: #00FFCB;
+        width: 350px;
+        margin: 10% auto;
+        border-radius: 50px;
+    
+    }
+    
+}
+.note{
+    /* width: 400px; */
+    /* background: #00FFCB; */
+    height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.notic_object{
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    /* display: flex; */
+    padding: 20px;
+
+}
+.post-date {
+    /* display: flex; */
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+    color: #e91e63;
+}
+/*  */
+.wrap {
+    height: 10%;
+    margin: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.buttons:hover,
+.buttons:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.BTN a {
+    appearance: none;
+    background-color: #ebd0d0;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #86a2ca 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.BTN a:hover {
+    background-color: #ebbd47;
+    box-shadow: #ff5b09 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+.BTN a:active {
+    transform: scale(1.025);
+}
+
+.fa-hand-o-down {
+    font-size: 3rem;
+}
+
+.conteudo {
+    background: linear-gradient(to right, var(--cores-dancantes));
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 999;
+    animation: coresDancantas 2s linear infinite;
+}
+
+@keyframes coresDancantas {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Library */
+.wrapper {
+    height: 10vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 4em;
+    color: #00FFCB;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/*  */
+
+.fixed-position {
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+}
+
+.chat-icon-box {
+    width: 73px;
+    height: 93px;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 3rem;
+
+}
+
+.circle {
+    position: absolute;
+}
+
+/* footer */
+
+.BOX {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.social-icon {
+    display: flex;
+    margin: 20px;
+}
+
+.social-icon i {
+    margin: 20%;
+}
+
+nav .fa {
+    display: none;
+}
+
+.social-icon__item .fa {
+    padding: 20px;
+    font-size: 3rem;
+    color: #e91e63;
+}
+.copyright{
+    text-align: center;
+    color: white;
+}
+
+/*--------------------- COMMON TO ALL BRANCHES -----------------------*/
+
+.book_Room{
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .nev-links ul li {
+        display: block
+    }
+
+    .nev-links {
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -260px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: rgb(0, 0, 0);
+        margin: 10px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nev-links {
+        padding: 30px;
+    }
+
+    .searchBox:hover>.searchInput {
+        width: 130px;
+        padding: 0 6px;
+
+    }
+
+    .wrapper {
+        height: 10vh;
+        /*This part is important for centering*/
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        /* width: 50px;
+        height: 35vh;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 30px; */
+    }
+
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .typing-demo{
+        width: 200px;
+        font-size: 1rem;
+    }
+/* ------------------------------- Computer Science Engineering  ------------------------------ */
+
+.book{
+    flex-direction: column;
+    margin: 40px;
+}
+
+/* ---------------------------------- Information technology ---------------------------------- */
+
+
+
+/* ------------------------- Electronics and Communication Engineering ------------------------ */
+
+
+
+/* ---------------------------------- Mechanical Engineering ---------------------------------- */
+}
+
+/*  */
