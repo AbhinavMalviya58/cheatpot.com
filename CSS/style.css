@@ -688,7 +688,7 @@ ul {
 
 .footer-col ul li a:hover {
     color: #ffffff;
-    padding-left: 8px;
+    /* padding-left: 8px; */
 }
 
 .footer-col .social-links a {
@@ -723,7 +723,7 @@ nav .fa {
 }
 
 .social-icon__item .fa {
-    padding: 20px;
+    padding: 10px;
     font-size: 3rem;
     color: #e91e63;
 }
