@@ -38,7 +38,6 @@ $(document).ready(function () {
     });
 });
 
-
 // Header BackGround Change on Schroll
 
 let header = document.querySelector('header')
